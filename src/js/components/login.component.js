@@ -4,6 +4,11 @@ export class LoginComponent {
     constructor() {
         this._autService = new AuthService(); 
     }
+
+    /**
+     * @desc Renders markup for user login form
+     * @returns {string} Markup
+     */
     render() {
         return `
         <div class="auth-wrap d-flex mt-5">
@@ -30,6 +35,9 @@ export class LoginComponent {
         `;
     }
 
+    /**
+     * @desc Calls login authorization on submit
+     */
     afterRender() {
         document.forms['loginForm'].addEventListener('submit', (e) => {
             e.preventDefault();

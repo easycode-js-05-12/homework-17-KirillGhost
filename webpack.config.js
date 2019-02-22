@@ -9,6 +9,7 @@ module.exports = {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
+    watch: true,
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         compress: true,
